@@ -1,3 +1,80 @@
+/* Progreso circular para el botón de inicio */
+.circular-progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+.circular-progress {
+    position: relative;
+    display: block;
+    width: 64px;
+    height: 64px;
+}
+.circular-bg {
+    stroke: #e0e0e0;
+    opacity: 0.5;
+}
+.circular-bar {
+    stroke: url(#progress-gradient);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.1s linear;
+    filter: drop-shadow(0 0 6px #a8edea88);
+}
+.enter-btn {
+    position: relative;
+    z-index: 3;
+    display: block;
+    margin: 0 auto;
+}
+/* Animación para el botón de inicio */
+.enter-btn.animating {
+    animation: pulse-welcome 0.9s cubic-bezier(.68,-0.55,.27,1.55) infinite;
+    box-shadow: 0 0 0 0.5rem #a8edea88, 0 0 0 1rem #fed6e388;
+}
+
+@keyframes pulse-welcome {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0.5rem #a8edea88, 0 0 0 1rem #fed6e388;
+    }
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 1.2rem #fed6e388, 0 0 0 2rem #a8edea55;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0.5rem #a8edea88, 0 0 0 1rem #fed6e388;
+    }
+}
+/* Botón de control de música mejorado */
+.music-toggle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+    border: 2px solid #6c63ff;
+    box-shadow: 0 2px 8px rgba(108, 99, 255, 0.15);
+    color: #6c63ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+.music-toggle:hover {
+    background: linear-gradient(120deg, #fed6e3 0%, #a8edea 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(108, 99, 255, 0.25);
+}
+.music-toggle:active {
+    box-shadow: 0 2px 4px rgba(108, 99, 255, 0.18);
+}
 .horizontal-cv {
     display: flex;
     flex-direction: row;
