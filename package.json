@@ -1,0 +1,12 @@
+{
+  "name": "curriculum-tp-nro-1",
+  "version": "2.0.0",
+  "description": "CV interactivo con música y animaciones.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kano55K/Curriculum-Tp-Nro-1.git"
+  },
+  "author": "Kano55K",
+  "license": "MIT"
+}
