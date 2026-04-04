@@ -93,9 +93,6 @@
     flex-direction: column;
     align-items: stretch;
 }
-.dropdown-btn {
-    /* ya tiene estilos, pero aquí se puede ajustar para horizontal si se desea */
-}
 .dropdown-content.horizontal-slide {
     display: block;
     max-width: 0;
