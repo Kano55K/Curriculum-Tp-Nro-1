@@ -152,8 +152,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const bg1 = document.getElementById('bg1');
     const bg2 = document.getElementById('bg2');
     const images = [
-        "linear-gradient(120deg, #a8edea99 0%, #fed6e399 100%), url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh2ZMlrQ20KQaPPmK61gzE20KMF9Vuds_0gfEbsWKNZxp2XimU3F4ltRToi4jSurEEpuKeUQnecpd5EgnynvUCXRUUeghwNLiepV0FtxTiW7ZN7PuOzN3Ldv-Xyj0HmVaBfO8fmX2skvvu/w1366-h768-c/mordekaiser-new-splash-art-lol-4K-96.jpg')",
-        "linear-gradient(120deg, #a8edea99 0%, #fed6e399 100%), url('https://images3.alphacoders.com/101/thumb-1920-1018651.jpg')"
+        "linear-gradient(120deg, #a8edea99 0%, #fed6e399 100%), url('assets/morde_fondo_uno.jpg')",
+        "linear-gradient(120deg, #a8edea99 0%, #fed6e399 100%), url('assets/morde_fondo_dos.jpg')"
     ];
     let showing = 0;
     bg1.style.backgroundImage = images[0];
