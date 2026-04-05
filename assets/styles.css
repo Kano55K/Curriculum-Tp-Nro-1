@@ -93,6 +93,9 @@
     flex-direction: column;
     align-items: stretch;
 }
+.dropdown-btn {
+    /* ya tiene estilos, pero aquí se puede ajustar para horizontal si se desea */
+}
 .dropdown-content.horizontal-slide {
     display: block;
     max-width: 0;
@@ -115,7 +118,7 @@
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw;
     height: 100vh;
-    background: url('https://i.pinimg.com/1200x/69/88/d4/6988d4d90a116f8541d1c19202b2ca89.jpg') center center/cover no-repeat;
+    background: url('fondo_bienvenida.jpg') center center/cover no-repeat;
     filter: blur(6px) brightness(0.7);
     z-index: 1;
     pointer-events: none;
