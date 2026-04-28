@@ -1,3 +1,26 @@
+:root {
+    --color-principal: #23272a;
+    --color-secundario: #0f3d3e;
+    --color-acento: #b3001b;
+    --color-texto: #e0e0e0;
+    --color-progreso-bg: #e0e0e0;
+    --color-progreso-shadow: #a8edea88;
+    --color-progreso-shadow2: #fed6e388;
+    --color-progreso-shadow3: #a8edea55;
+    --color-music-gradient1: #a8edea;
+    --color-music-gradient2: #fed6e3;
+    --color-music-border: #6c63ff;
+    --color-music-shadow: rgba(108, 99, 255, 0.15);
+    --color-music-shadow-hover: rgba(108, 99, 255, 0.25);
+    --color-music-shadow-active: rgba(108, 99, 255, 0.18);
+    --color-icon-border: #0f3d3e;
+    --color-icon-bg: #23272a;
+    --color-shadow-oscuro: #000a;
+    --color-shadow-icon: #0008;
+    --color-dropdown-bg: #0f3d3ecc;
+    --color-contacto-bg: #23272acc;
+}
+
 /* Progreso circular para el botón de inicio */
 .circular-progress-container {
     display: flex;
@@ -15,14 +38,14 @@
     height: 64px;
 }
 .circular-bg {
-    stroke: #e0e0e0;
+    stroke: var(--color-texto);
     opacity: 0.5;
 }
 .circular-bar {
     stroke: url(#progress-gradient);
     stroke-linecap: round;
     transition: stroke-dashoffset 0.1s linear;
-    filter: drop-shadow(0 0 6px #a8edea88);
+    filter: drop-shadow(0 0 6px var(--color-progreso-shadow));
 }
 .enter-btn {
     position: relative;
@@ -33,21 +56,21 @@
 /* Animación para el botón de inicio */
 .enter-btn.animating {
     animation: pulse-welcome 0.9s cubic-bezier(.68,-0.55,.27,1.55) infinite;
-    box-shadow: 0 0 0 0.5rem #a8edea88, 0 0 0 1rem #fed6e388;
+    box-shadow: 0 0 0 0.5rem var(--color-music-gradient1), 0 0 0 1rem var(--color-music-gradient2);
 }
 
 @keyframes pulse-welcome {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0.5rem #a8edea88, 0 0 0 1rem #fed6e388;
+        box-shadow: 0 0 0 0.5rem var(--color-music-gradient1), 0 0 0 1rem var(--color-music-gradient2);
     }
     50% {
         transform: scale(1.08);
-        box-shadow: 0 0 0 1.2rem #fed6e388, 0 0 0 2rem #a8edea55;
+        box-shadow: 0 0 0 1.2rem var(--color-music-gradient2), 0 0 0 2rem var(--color-music-gradient3);
     }
     100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0.5rem #a8edea88, 0 0 0 1rem #fed6e388;
+        box-shadow: 0 0 0 0.5rem var(--color-music-gradient1), 0 0 0 1rem var(--color-music-gradient2);
     }
 }
 /* Botón de control de música mejorado */
@@ -55,10 +78,10 @@
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-    border: 2px solid #6c63ff;
+    background: linear-gradient(120deg, var(--color-music-gradient1) 0%, var(--color-music-gradient2) 100%);
+    border: 2px solid var(--color-music-border);
     box-shadow: 0 2px 8px rgba(108, 99, 255, 0.15);
-    color: #6c63ff;
+    color: var(--color-music-border);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +91,7 @@
     outline: none;
 }
 .music-toggle:hover {
-    background: linear-gradient(120deg, #fed6e3 0%, #a8edea 100%);
+    background: linear-gradient(120deg, var(--color-music-gradient2) 0%, var(--color-music-gradient1) 100%);
     color: #fff;
     box-shadow: 0 4px 16px rgba(108, 99, 255, 0.25);
 }
@@ -130,7 +153,7 @@
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 2px 16px #000a;
-    background: #23272a;
+    background: var(--color-icon-bg);
 }
 .icon-img {
     width: 28px;
@@ -140,21 +163,21 @@
     margin-right: 0.7rem;
     vertical-align: middle;
     box-shadow: 0 0 4px #0008;
-    border: 2px solid #0f3d3e;
-    background: #23272a;
+    border: 2px solid var(--color-music-gradient2);
+    background: var(--color-icon-bg);
 }
 body {
     margin: 0;
     font-family: 'Beaufort', 'Montserrat', sans-serif;
     background: transparent;
-    color: #e0e0e0;
+    color: var(--color-texto);
 }
 
 /* Fondo de bienvenida con metal negro y verde azulado */
 .welcome-screen {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, #23272a 0%, #0f3d3e 100%);
+    background: linear-gradient(135deg, var(--color-icon-bg) 0%, var(--color-music-gradient2) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,19 +205,19 @@ body {
     100% { transform: scale(1); }
 }
 .enter-btn {
-    background: #23272a;
-    color: #e0e0e0;
-    border: 2px solid #b3001b;
+    background: var(--color-icon-bg);
+    color: var(--color-texto);
+    border: 2px solid var(--color-acento);
     padding: 1rem 2.5rem;
     font-size: 1.2rem;
     border-radius: 30px;
     cursor: pointer;
-    box-shadow: 0 4px 20px #0f3d3e99;
+    box-shadow: 0 4px 20px var(--color-icon-border);
     transition: background 0.3s, color 0.3s;
 }
 .enter-btn:hover {
-    background: #0f3d3e;
-    color: #b3001b;
+    background: var(--color-icon-bg);
+    color: var(--color-acento);
 }
 
 .main-content {
@@ -213,7 +236,7 @@ header {
 }
 header h1 {
     font-size: 2.5rem;
-    color: #0f3d3e;
+    color: var(--color-icon-border);
     letter-spacing: 2px;
     margin: 0;
     text-shadow: 1px 2px 8px #000a;
@@ -228,9 +251,9 @@ header h1 {
 }
 .dropdown-btn {
     width: 100%;
-    background: #23272a;
-    color: #e0e0e0;
-    border: 2px solid #b3001b;
+    background: var(--color-icon-bg);
+    color: var(--color-texto);
+    border: 2px solid var(--color-acento);
     padding: 1rem;
     font-size: 1.1rem;
     border-radius: 10px;
@@ -242,18 +265,18 @@ header h1 {
     gap: 0.7rem;
 }
 .dropdown-btn:hover {
-    background: #0f3d3e;
-    color: #b3001b;
+    background: var(--color-icon-bg);
+    color: var(--color-acento);
 }
 .dropdown-content {
     display: none;
-    background: #0f3d3ecc;
-    color: #e0e0e0;
+    background: var(--color-icon-bg);
+    color: var(--color-texto);
     border-radius: 0 0 10px 10px;
     padding: 1rem;
     margin-top: 0.2rem;
     box-shadow: 0 2px 8px #000a;
-    border-top: 2px solid #b3001b;
+    border-top: 2px solid var(--color-acento);
 }
 .dropdown.active .dropdown-content {
     display: block;
@@ -265,16 +288,16 @@ header h1 {
 }
 /* Contacto con fondo metal y detalles rojo oscuro */
 .contacto {
-    background: #23272acc;
+    background: var(--color-icon-bg);
     max-width: 500px;
     margin: 0 auto;
     border-radius: 15px;
     padding: 2rem 1.5rem;
-    box-shadow: 0 2px 12px #000a;
-    border: 2px solid #b3001b;
+    box-shadow: 0 2px 12px var(--color-icon-border);
+    border: 2px solid var(--color-acento);
 }
 .contacto h2 {
-    color: #b3001b;
+    color: var(--color-acento);
     margin-top: 0;
 }
 #contact-form {
@@ -285,17 +308,17 @@ header h1 {
 #contact-form input {
     padding: 0.8rem;
     border-radius: 8px;
-    border: 1px solid #0f3d3e;
+    border: 1px solid var(--color-icon-border);
     font-size: 1rem;
-    background: #0f3d3e;
-    color: #e0e0e0;
+    background: var(--color-icon-bg);
+    color: var(--color-texto);
 }
 #contact-form input:focus {
-    outline: 2px solid #b3001b;
+    outline: 2px solid var(--color-acento);
 }
 #contact-form button {
-    background: #b3001b;
-    color: #e0e0e0;
+    background: var(--color-acento);
+    color: var(--color-texto);
     border: none;
     padding: 0.8rem;
     border-radius: 8px;
@@ -304,8 +327,8 @@ header h1 {
     transition: background 0.3s;
 }
 #contact-form button:hover {
-    background: #0f3d3e;
-    color: #b3001b;
+    background: var(--color-icon-bg);
+    color: var(--color-acento);
 }
 /* Fondo animado con imagen personalizada */
 /* Capas de fondo animadas */
